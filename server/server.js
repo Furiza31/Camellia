@@ -6,9 +6,14 @@ const start = () => {
 
     // static files
     app.use(express.static(path.join(__dirname, "public")));
+    app.set("views", path.join(__dirname, "views"));
 
     // set the view engine to ejs
     app.set('view engine', 'ejs');
+
+    app.get("/", (req, res) => {
+        res.render("index.ejs");
+    });
 
     app.listen(settings.port, () => {
         console.log(`Server on: http://localhost:${settings.port}`);
