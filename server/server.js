@@ -13,11 +13,12 @@ const start = () => {
     app.set('view engine', 'ejs');
 
     app.get("/", (req, res) => {
-        res.render("index.ejs");
+        res.render("index", { where: "index" });
     });
 
     app.get("/cours", (req, res) => {
         cours.init();
+        res.render("cours", { data: cours.readFile(), where: "cours" })
     });
 
     app.listen(settings.port, () => {

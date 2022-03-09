@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale    =1.0">
     <link rel="stylesheet" href="/css/main.css">
     <title>Camellia</title>
 </head>
@@ -12,5 +12,6 @@
 <body>
 
     <header>
-        <a href="/cours">Cours</a>
+        <a href="/" <% if ( locals.where=="index" ) { %> class="selected" <% } %>>Accueil</a>
+        <a href="/cours" <% if ( locals.where=="cours" ) { %> class="selected" <% } %> >Cours</a>
     </header>
