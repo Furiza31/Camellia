@@ -3,6 +3,7 @@ const start = () => {
     const express = require('express');
     const app = express();
     const path = require("path");
+    const cours = require("./imports/cours");
 
     // static files
     app.use(express.static(path.join(__dirname, "public")));
@@ -13,6 +14,10 @@ const start = () => {
 
     app.get("/", (req, res) => {
         res.render("index.ejs");
+    });
+
+    app.get("/cours", (req, res) => {
+        cours.init();
     });
 
     app.listen(settings.port, () => {
