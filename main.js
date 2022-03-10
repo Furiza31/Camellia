@@ -30,7 +30,7 @@ const createWindow = () => {
         minimizable: true,
         maximizable: true,
         autoHideMenuBar: true,
-        backgroundColor: "#101010",
+        backgroundColor: "#282a36",
         show: false
     });
 

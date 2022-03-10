@@ -12,6 +12,7 @@ const start = () => {
     // set the view engine to ejs
     app.set('view engine', 'ejs');
 
+    // routes
     app.get("/", (req, res) => {
         res.render("index", { where: "index" });
     });
@@ -21,6 +22,7 @@ const start = () => {
         res.render("cours", { data: cours.readFile(), where: "cours" })
     });
 
+    // listen
     app.listen(settings.port, () => {
         console.log(`Server on: http://localhost:${settings.port}`);
     });

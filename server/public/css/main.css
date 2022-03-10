@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+:root {
+    --blackground: #18191a;
+    --background: #444950;
+    --blockBackground: #282a36;
+    --blue: #00aeff;
+    --transparentWhite: rgba(255, 255, 255, 0.133);
+    --white: #e3f7ff;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -8,7 +17,7 @@
 }
 
 body {
-    background-color: #303030;
+    background-color: var(--blackground);
 }
 
 a {
@@ -25,7 +34,7 @@ header {
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
-    background-color: #202020;
+    background-color: var(--background);
     gap: 5px;
 }
 
@@ -35,12 +44,14 @@ header a {
     padding: 10px;
     border-radius: 2px;
     transition-duration: 0.3s;
+    border-bottom: 2px solid transparent;
 }
 
 header a:hover {
-    background-color: rgba(255, 255, 255, 0.133);
+    background-color: var(--transparentWhite);
 }
 
 header a.selected {
-    background-color: rgba(255, 255, 255, 0.133);
+    color: var(--blue);
+    border-bottom-color: var(--blue);
 }
