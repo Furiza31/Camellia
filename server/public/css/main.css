@@ -12,7 +12,7 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Maven Pro', sans-serif;
-    color: white;
+    color: var(--white);
     font-size: 17px;
 }
 

@@ -1,5 +1,16 @@
 <%- include('../includes/header'); %>
+    <script src="/js/ajoutCours.js" defer></script>
 
+    <% console.log(locals.data); %>
 
+        <div>
 
-    <%- include('../includes/footer'); %>
+            <fieldset>
+                <legend>Année</legend>
+                <input type="text" id="textAnne" placeholder="Rechercher / ajouter une année">
+                <a id="ajoutAnnee"> Ajouter une année </a>
+            </fieldset>
+
+        </div>
+
+        <%- include('../includes/footer'); %>

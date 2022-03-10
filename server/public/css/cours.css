@@ -1,0 +1,72 @@
+div {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: 0.3s;
+    width: fit-content;
+    height: 60%;
+    width: 100%;
+}
+
+h1 {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+
+div fieldset {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 5px;
+    height: 100%;
+    width: 20%;
+    background-color: var(--background);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid var(--transparentWhite);
+}
+
+div fieldset legend {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 25px;
+    transform: translateY(-20%);
+    margin-left: 20px;
+}
+
+div fieldset input {
+    outline: none;
+    position: relative;
+    display: block;
+    border: 1px solid var(--blockBackground);
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--white);
+    background-color: var(--blockBackground);
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
+div fieldset a {
+    position: relative;
+    display: block;
+    background-color: var(--blockBackground);
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid var(--blockBackground);
+    transition-duration: 0.3s;
+}
+
+div fieldset a:hover {
+    border-color: var(--blue);
+    cursor: pointer;
+}

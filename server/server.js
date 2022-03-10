@@ -22,6 +22,12 @@ const start = () => {
         res.render("cours", { data: cours.readFile(), where: "cours" })
     });
 
+    app.get("/cours/anne/:name", (req, res) => {
+        let pfPath = path.join(__dirname, "../cours", req.params.name);
+        cours.createFile(pfPath);
+        res.redirect("/cours");
+    });
+
     // listen
     app.listen(settings.port, () => {
         console.log(`Server on: http://localhost:${settings.port}`);
