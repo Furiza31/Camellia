@@ -10,10 +10,22 @@ const init = () => {
 
 const readFile = () => {
     let res = [];
-    let data = fs.readdirSync(dataPath);
+    let anne = fs.readdirSync(dataPath),
+        cours, cpt;
 
-    for (let i = 0; i < data.length; i++) {
-        res.push([data[i], fs.readdirSync(path.join(dataPath, data[i]))])
+    for (let i = 0; i < anne.length; i++) {
+        cours = fs.readdirSync(path.join(dataPath, anne[i]));
+        res.push({
+            anne: anne[i],
+            cours: []
+        });
+        for (let j = 0; j < cours.length; j++) {
+            cpt = fs.readdirSync(path.join(dataPath, anne[i], cours[j]));
+            res[res.length - 1].cours.push({
+                name: cours[j],
+                cpt: cpt
+            });
+        }
     }
 
     return res;
