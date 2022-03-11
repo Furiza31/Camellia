@@ -9,6 +9,11 @@
                 <legend>Année</legend>
                 <input type="text" id="textAnne" placeholder="Rechercher / ajouter une année">
                 <a id="ajoutAnnee"> Ajouter une année </a>
+                <% for (let i=0; i < locals.data.length; i++) { %>
+                    <a>
+                        _ <%= locals.data[i].annee %> _
+                    </a>
+                    <% } %>
             </fieldset>
 
         </div>
