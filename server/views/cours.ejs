@@ -8,7 +8,7 @@
             <input type="text" id="textAnne" placeholder="Rechercher / ajouter une année">
             <% for (let i=0; i < locals.data.length; i++) { %>
                 <a>
-                    <%= locals.data[i].annee %> <span id="suprAnne"></span>
+                    <%= locals.data[i].annee %> <span id="suprAnne">🗑️</span>
                 </a>
                 <% } %>
                     <a id="ajoutAnnee"> Ajouter une année </a>
